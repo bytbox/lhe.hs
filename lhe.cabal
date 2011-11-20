@@ -12,7 +12,7 @@ Version:             0.1
 Synopsis:            Parse for Les-Houches event files
 
 -- A longer description of the package.
--- Description:         
+Description:         This package implements a parser for the Les-Houches event file format as described in hep-ph/0609017
 
 -- The license under which the package is released.
 License:             MIT
