@@ -1,4 +1,4 @@
 all: demo
 
-demo: Main.hs LHE.hs
+demo: Main.hs Text/LHE.hs
 	ghc -o $@ Main.hs

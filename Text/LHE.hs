@@ -1,4 +1,4 @@
-module LHE (
+module Text.LHE (
   version,
 
   parseEventFile,
@@ -10,8 +10,6 @@ module LHE (
   Event(..),
   RawEvent(..),
 ) where
-
-import System.IO.Unsafe
 
 import Text.XML.HaXml.Parse (xmlParse)
 import Text.XML.HaXml.Types (Document(..), Element(..), Content(..), QName(..))
