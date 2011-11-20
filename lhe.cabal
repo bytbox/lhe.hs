@@ -39,7 +39,7 @@ Build-type:          Simple
 -- Extra-source-files:  
 
 -- Constraint on the version of Cabal needed to build this package.
-Cabal-version:       >=1.2
+Cabal-version:       >=1.6
 
 
 Library
@@ -54,4 +54,8 @@ Library
   
   -- Extra tools (e.g. alex, hsc2hs, ...) needed to build the source.
   -- Build-tools:         
-  
+ 
+source-repository head
+  type:  git
+  location: https://bytbox@github.com/bytbox/lhe.hs.git
+ 
