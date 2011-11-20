@@ -1,0 +1,6 @@
+*.swp
+*.hi
+*.o
+demo
+_build
+*.lhe
