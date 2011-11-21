@@ -6,7 +6,7 @@ Name:                lhe
 -- The package version. See the Haskell package versioning policy
 -- (http://www.haskell.org/haskellwiki/Package_versioning_policy) for
 -- standards guiding when and how versions should be incremented.
-Version:             0.2.3
+Version:             0.3
 
 -- A short (one-line) description of the package.
 Synopsis:            Parser and writer for Les-Houches event files
@@ -47,7 +47,7 @@ Library
   Exposed-modules:     Data.LHE
   
   -- Packages needed in order to build this package.
-  Build-depends: haskell2010 >= 1.0 , HaXml >= 1.22
+  Build-depends: haskell2010 >= 1.0 , HaXml >= 1.22, bytestring >= 0.9
   
   -- Modules not exported by this package.
   -- Other-modules:       

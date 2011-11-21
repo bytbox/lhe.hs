@@ -16,6 +16,8 @@ module Data.LHE (
   RawEvent(..),
 ) where
 
+import qualified Data.ByteString.Char8 as S
+
 import Text.XML.HaXml.Parse (xmlParse)
 import Text.XML.HaXml.Types (Document(..), Element(..), Content(..), QName(..))
 
@@ -30,20 +32,20 @@ data RawEvent = RawEvent [Double] [[Double]]
 
 parseEventFile :: String -> IO [Event]
 parseEventFile fname = do
-  readFile fname >>= return . parseEvents fname
+  S.readFile fname >>= return . parseEvents fname
 
-parseEvents :: String -> String -> [Event]
+parseEvents :: String -> S.ByteString -> [Event]
 parseEvents fname dat =
   let re = parseRawEvents fname dat in
     []
 
 parseRawEventFile :: String -> IO [RawEvent]
 parseRawEventFile fname = do
-  readFile fname >>= return . parseRawEvents fname
+  S.readFile fname >>= return . parseRawEvents fname
 
-parseRawEvents :: String -> String -> [RawEvent]
+parseRawEvents :: String -> S.ByteString -> [RawEvent]
 parseRawEvents fname dat =
-  let Document _ _ (Elem eName _ eList) _ = xmlParse fname dat in
+  let Document _ _ (Elem eName _ eList) _ = xmlParse fname (S.unpack dat) in
     map (getRawEvent . getElem) $ filter isEvent eList
   where
     isEvent (CElem (Elem (N "event") _ _) _) = True
