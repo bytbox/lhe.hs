@@ -1,4 +1,12 @@
+{-|
+
+This module provides a pure haskell implementation of a parser and writer for
+the Les-Houches event file format. (Note that the writer doesn't actually exist
+yet.)
+
+-}
 module Text.LHE (
+  -- |The major and minor parts of this version of lhe.
   version,
 
   parseEventFile,
@@ -24,7 +32,7 @@ data RawEvent = RawEvent [Double] [[Double]]
   deriving (Eq, Show, Read)
 
 version :: String
-version = "0.1"
+version = "0.1.1"
 
 parseEventFile :: String -> IO [Event]
 parseEventFile fname = do
