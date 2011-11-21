@@ -5,7 +5,7 @@ the Les-Houches event file format. (Note that the writer doesn't actually exist
 yet.)
 
 -}
-module Text.LHE (
+module Data.LHE (
   -- |The major and minor parts of this version of lhe.
   version,
 

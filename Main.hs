@@ -1,6 +1,6 @@
 module Main where
 
-import Text.LHE as LHE
+import Data.LHE as LHE
 
 main = do
   putStr "Using LHE v" >> putStrLn LHE.version
