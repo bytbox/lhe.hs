@@ -6,13 +6,13 @@ Name:                lhe
 -- The package version. See the Haskell package versioning policy
 -- (http://www.haskell.org/haskellwiki/Package_versioning_policy) for
 -- standards guiding when and how versions should be incremented.
-Version:             0.2
+Version:             0.2.1
 
 -- A short (one-line) description of the package.
-Synopsis:            Parse for Les-Houches event files
+Synopsis:            Parser and writer for Les-Houches event files
 
 -- A longer description of the package.
-Description:         This package implements a parser for the Les-Houches event file format as described in hep-ph/0609017
+Description:         This package implements a parser and writer for the Les-Houches event file format as described in hep-ph/0609017
 
 -- The license under which the package is released.
 License:             MIT

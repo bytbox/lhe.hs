@@ -32,7 +32,7 @@ data RawEvent = RawEvent [Double] [[Double]]
   deriving (Eq, Show, Read)
 
 version :: String
-version = "0.1.1"
+version = "0.2.1"
 
 parseEventFile :: String -> IO [Event]
 parseEventFile fname = do
