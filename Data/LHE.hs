@@ -1,8 +1,8 @@
 {-|
 
 This module provides a pure haskell implementation of a parser and writer for
-the Les-Houches event file format. (Note that the writer doesn't actually exist
-yet.)
+the Les-Houches event file format, as described in hep-ph/0609017. (Note that
+the writer doesn't actually exist yet.)
 
 -}
 module Data.LHE (
