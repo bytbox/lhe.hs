@@ -4,4 +4,4 @@ import Data.LHE as LHE
 
 main = do
   events <- LHE.parseRawEventFile "events.lhe"
-  putStrLn $ show events
+  putStrLn $ show $ length events
