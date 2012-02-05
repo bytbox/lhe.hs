@@ -18,7 +18,7 @@ module Data.LHE (
 
 import qualified Data.ByteString.Char8 as S
 
-import Text.XML.HaXml.Parse (xmlParse)
+import Text.XML.HaXml.ParseLazy (xmlParse)
 import Text.XML.HaXml.Types (Document(..), Element(..), Content(..), QName(..))
 
 data Init = Init
