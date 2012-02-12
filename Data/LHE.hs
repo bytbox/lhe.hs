@@ -8,8 +8,6 @@ the writer doesn't actually exist yet.)
 module Data.LHE (
   parseFile,
   parse,
-  parseEventFile,
-  parseEvents,
 ) where
 
 import qualified Data.ByteString.Char8 as S
@@ -32,15 +30,6 @@ parse :: String -> S.ByteString -> (Run, [Event])
 parse fname dat =
   let doc = xmlParse fname $ S.unpack dat in
     (runFromDoc doc, eventsFromDoc doc)
-
-parseEventFile :: String -> IO [Event]
-parseEventFile fname = do
-  S.readFile fname >>= return . parseEvents fname
-
-parseEvents :: String -> S.ByteString -> [Event]
-parseEvents fname dat =
-  let re = parseRawEvents fname dat in
-    map makeEvent re
 
 runFromDoc = makeRun . rawRunFromDoc
 
