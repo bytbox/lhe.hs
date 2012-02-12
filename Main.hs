@@ -9,6 +9,13 @@ instance Show Event where
 instance Show Particle where
   show p = show $ partPDG p
 
+instance Show Run where
+  show = show . runBeam
+
+instance Show Beam where
+  show = show . beamPDG
+
 main = do
-  events <- LHE.parseEventFile "events.lhe"
-  putStrLn $ show events
+  (run, events) <- LHE.parseFile "events.lhe"
+  putStrLn $ show run
+  --putStrLn $ show events
