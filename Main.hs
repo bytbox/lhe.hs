@@ -18,4 +18,4 @@ instance Show Beam where
 main = do
   (run, events) <- LHE.parseFile "events.lhe"
   putStrLn $ show run
-  --putStrLn $ show events
+  putStrLn $ show $ length events
