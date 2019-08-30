@@ -40,7 +40,7 @@ eventsFromDoc d =
 makeRun :: RawRun -> Run
 makeRun (RawRun (bpdg1:bpdg2:be1:be2:pdfg1:pdfg2:pdfs1:pdfs2:idwt:nproc:[]) ps) = Run
   { runBeam = ( Beam (read bpdg1) (parseDouble be1) (read pdfg1) (read pdfs1)
-              , Beam (read bpdg1) (parseDouble be1) (read pdfg1) (read pdfs1)
+              , Beam (read bpdg2) (parseDouble be2) (read pdfg2) (read pdfs2)
               )
   , idwt    = read idwt
   , nProc   = read nproc
